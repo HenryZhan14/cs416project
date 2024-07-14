@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narrative Visualization</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>COVID-19 Data Visualization</h1>
+    </header>
+    <div id="controls">
+        <label for="year">Year: </label>
+        <input type="range" id="year" name="year" min="2020" max="2022" value="2020" step="1" list="years">
+        <datalist id="years">
+            <option value="2020"></option>
+            <option value="2021"></option>
+            <option value="2022"></option>
+        </datalist>
+        <span id="yearLabel">2020</span>
+        <br>
+        <button id="scene1">Overview</button>
+        <button id="scene2">Cases by State</button>
+        <button id="scene3">Deaths by State</button>
+    </div>
+    <div id="visualization">
+        <div class="chart-container">
+            <div class="chart-description" id="cases-description"></div>
+            <div id="cases-chart"></div>
+        </div>
+        <div class="chart-container">
+            <div class="chart-description" id="deaths-description"></div>
+            <div id="deaths-chart"></div>
+        </div>
+        <div class="chart-container">
+            <div class="chart-description" id="map-description"></div>
+            <div id="map-chart"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
